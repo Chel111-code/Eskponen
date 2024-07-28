@@ -59,7 +59,7 @@ function addEventListeners() {
       const resultMessage = document.querySelectorAll('.resultMessage')[index];
       if (userAnswer == correctAnswer) {
         resultMessage.textContent = 'Jawaban benar!';
-        resultMessage.classList.remove('text-merah');
+        resultMessage.classList.remove('text-red-400');
         const audioElement2 = document.getElementById('myAudio2');
         audioElement2.play();
         resultMessage.classList.add('text-hijau');
@@ -68,7 +68,7 @@ function addEventListeners() {
         const audioElement = document.getElementById('myAudio');
         audioElement.play();
         resultMessage.classList.remove('text-hijau');
-        resultMessage.classList.add('text-merah');
+        resultMessage.classList.add('text-red-400');
       }
 
       // Menghapus pesan setelah 5 detik
@@ -90,15 +90,16 @@ function addEventListeners() {
 document.addEventListener('DOMContentLoaded', addEventListeners);
 
 document.getElementById('checkAnswerButton2').addEventListener('click', function () {
-  const inputs = document.querySelectorAll('input[type="text"]');
+  const table = document.querySelector('table');
+  const inputs = table.querySelectorAll('input[type="text"]');
   let allCorrect = true;
   let allFilled = true;
 
   inputs.forEach((input) => {
-    if (input.value === '') {
+    if (input.value.trim() === '') {
       allFilled = false;
     }
-    if (input.value !== input.dataset.answer) {
+    if (input.value.trim() !== input.dataset.answer) {
       allCorrect = false;
     }
   });
@@ -107,27 +108,30 @@ document.getElementById('checkAnswerButton2').addEventListener('click', function
   if (!allFilled) {
     resultMessage2.textContent = 'Kamu harus menjawab semuanya!';
     resultMessage2.classList.remove('text-hijau');
-    resultMessage2.classList.remove('text-merah');
+    resultMessage2.classList.remove('text-red-400');
     resultMessage2.classList.add('text-yellow-400', 'font-semibold');
     const audioElement3 = document.getElementById('myAudio3');
     audioElement3.play();
   } else if (allCorrect) {
     resultMessage2.textContent = 'Jawaban benar!';
-    resultMessage2.classList.remove('text-merah');
+    resultMessage2.classList.remove('text-red-400');
     const audioElement2 = document.getElementById('myAudio2');
     audioElement2.play();
     resultMessage2.classList.add('text-hijau', 'font-semibold');
+    resultMessage2.classList.remove('text-yellow-400', 'font-semibold');
   } else {
     resultMessage2.textContent = 'Ada Jawaban yang salah, coba lagi.';
     const audioElement = document.getElementById('myAudio');
     audioElement.play();
     resultMessage2.classList.remove('text-hijau');
-    resultMessage2.classList.add('text-merah', 'font-semibold');
+    resultMessage2.classList.add('text-red-400', 'font-semibold');
+    resultMessage2.classList.remove('text-yellow-400', 'font-semibold');
   }
 });
 
 document.getElementById('clearButton2').addEventListener('click', function () {
-  const inputs = document.querySelectorAll('input[type="text"]');
+  const table = document.querySelector('table');
+  const inputs = table.querySelectorAll('input[type="text"]');
   inputs.forEach((input) => {
     input.value = '';
   });
