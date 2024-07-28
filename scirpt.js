@@ -56,9 +56,3 @@ toggleButton.addEventListener('click', function () {
     mariMemahami.scrollIntoView({ behavior: 'smooth' });
   }, totalDelay + 2000);
 });
-
-const pengantar = document.getElementById('pengantar');
-
-pengantar.addEventListener('click', function () {
-  pengantar.nextElementSibling.classList.toggle('hidden');
-});

@@ -42,6 +42,12 @@
         Assesment Digital
       </a>
     </div>
-    <script src="scirpt.js"></script>
+    <script>
+      const pengantar = document.getElementById('pengantar');
+
+      pengantar.addEventListener('click', function () {
+        pengantar.nextElementSibling.classList.toggle('hidden');
+      });
+    </script>
   </body>
 </html>
