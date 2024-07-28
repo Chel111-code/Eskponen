@@ -13,7 +13,7 @@
     </style>
   </head>
   <body class="bg-[#FFFAFB]">
-    <nav class="py-3 w-full px-5 fixed z-50 bg-white bg-opacity-90">
+    <nav class="py-3 w-full px-5 fixed top-0 z-50 border-b-2 bg-white bg-opacity-90">
       <header class="container flex justify-start">
         <div class="flex items-center gap-5">
           <a href="../index.html">
@@ -55,9 +55,9 @@
     </audio>
 
     <!-- Kegiatan 1 -->
-    <section class="container w-full pt-20 px-5 hidden">
+    <section class="container w-full pt-24 px-5 pb-40">
       <div class="flex gap-3 text-primary font-bold">
-        <h2 class="w-40">Kegiatan 1 :</h2>
+        <h2 class="w-44">Kegiatan 1 :</h2>
         <p>Memahami Bilangan Pokok dan Bilangan Pangkat</p>
       </div>
       <div class="border-2 border-primary pb-8 rounded-lg shadow-lg p-5 mt-12 relative">
@@ -121,7 +121,7 @@
               <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
             </div>
           </div>
-          <div
+          <!-- <div
             id="reload"
             class="flex items-center cursor-pointer mt-8 font-medium justify-end text-hijau gap-1 text-sm"
           >
@@ -138,7 +138,7 @@
                 fill="#6BD6C0"
               />
             </svg>
-          </div>
+          </div> -->
         </div>
         <div id="jadiBakteri" class="relative mt-8 hidden pb-12 zoomIn">
           <img src="../img/guru.png" class="w-14 mt-4" alt="" />
@@ -213,7 +213,7 @@
         </div>
       </div>
       <div
-        class="border-2 border-primary pb-8 rounded-lg shadow-lg p-5 mt-12 relative"
+        class="border-2 hidden border-primary zoomIn pb-8 rounded-lg shadow-lg p-5 mt-12 relative"
         id="mariEksplorasi"
       >
         <div
@@ -383,7 +383,10 @@
           </div>
         </div>
       </div>
-      <div class="border-2 border-primary pb-20 rounded-lg shadow-lg p-5 mt-12 relative">
+      <div
+        class="border-2 hidden zoomIn border-primary pb-20 rounded-lg shadow-lg p-5 mt-12 relative"
+        id="Kesimpulan"
+      >
         <div
           class="bg-red-300 py-2 px-3 absolute text-putih -top-5 rounded-lg text-sm font-semibold tracking-wider"
         >
@@ -404,9 +407,9 @@
     <!--  Akhir Kegiatan 1 -->
 
     <!-- Kegiatan 2 -->
-    <section class="container w-full pt-20 px-5 pb-40">
+    <section class="container zoomIn w-full pb-40 px-5 hidden" id="section2">
       <div class="flex gap-3 text-primary font-bold">
-        <h2 class="w-40">Kegiatan 2 :</h2>
+        <h2 class="w-44">Kegiatan 2 :</h2>
         <p>Menentukan Bilangan Pokok dan Bilangan Pangkat</p>
       </div>
       <div class="text-secondary mt-6 font-medium">
@@ -415,12 +418,12 @@
       <table class="min-w-full border text-center text-secondary font-medium mt-4 border-gray-300">
         <thead>
           <tr>
-            <th class="border border-gray-300 px-4 py-2 bg-hijau text-putih">No</th>
-            <th class="border border-gray-300 px-4 py-2 bg-hijau text-putih">
+            <th class="border border-gray-300 px-4 py-2 bg-hijau text-sm text-putih">No</th>
+            <th class="border border-gray-300 px-4 py-2 bg-hijau text-sm text-putih">
               Bilangan Berpangkat
             </th>
-            <th class="border border-gray-300 px-4 py-2 bg-hijau text-putih">Basis</th>
-            <th class="border border-gray-300 px-4 py-2 bg-hijau text-putih">Eksponen</th>
+            <th class="border border-gray-300 px-4 py-2 bg-hijau text-sm text-putih">Basis</th>
+            <th class="border border-gray-300 px-4 py-2 bg-hijau text-sm text-putih">Eksponen</th>
           </tr>
         </thead>
         <tbody>
@@ -529,13 +532,13 @@
       <div class="mt-5 flex gap-3 justify-end">
         <div id="resultMessage2" class="resultMessage2 mt-2 text-sm"></div>
         <button
-          class="text-xs py-2 px-3 bg-violet-400 text-putih rounded-md"
+          class="text-xs py-2 px-3 font-semibold bg-violet-400 text-putih rounded-md"
           id="checkAnswerButton2"
         >
           Cek jawaban
         </button>
         <button
-          class="text-xs py-2 px-3 border-2 border-jingga text-jingga rounded-md"
+          class="text-xs py-2 px-3 font-semibold border-2 border-jingga text-jingga rounded-md"
           id="clearButton2"
         >
           Hapus
@@ -543,6 +546,152 @@
       </div>
     </section>
     <!--  Akhir Kegiatan 2 -->
+
+    <!-- Kegiatan 3 -->
+    <section class="container w-full px-5 pb-40 hidden" id="section3">
+      <div class="flex gap-2 text-primary font-bold" id="section3anak">
+        <h2 class="w-36">Kegiatan 3 :</h2>
+        <p>Menghitung nilai bilangan berpangkat</p>
+      </div>
+      <div class="border-2 border-primary pb-8 rounded-lg shadow-lg p-5 mt-12 relative">
+        <div
+          class="bg-red-300 py-2 px-3 absolute text-putih -top-5 rounded-lg text-sm font-semibold tracking-wider"
+        >
+          Mari Memahami
+        </div>
+        <div class="relative">
+          <img src="../img/guru.png" class="w-14 mt-4" alt="" />
+          <div
+            class="text-sm bg-hijau text-white py-2 px-3 absolute top-6 left-8 bg-opacity-90 font-medium rounded-tl-none rounded-md"
+          >
+            Perhatikan uraian mengenai eksponen berikut!
+          </div>
+        </div>
+        <div class="flex gap-3 text-secondary font-medium ml-8 mt-12">
+          <div>2 x 2 x 2 ditulis</div>
+          <div class="text-hijau">2<sup>3</sup></div>
+        </div>
+        <div class="flex flex-wrap gap-2 text-secondary font-medium ml-8 mt-3">
+          <span>Ini artinya 2 x 2 x 2 =</span>
+          <span class="text-hijau">2<sup>3</sup></span> atau
+        </div>
+        <div class="flex flex-wrap gap-2 text-secondary font-medium ml-8 mt-3">
+          <span class="text-hijau">2<sup>3</sup></span> <span>= 2 x 2 x 2 </span>
+        </div>
+        <div class="flex flex-col gap-1 text-secondary font-medium ml-8 mt-3">
+          <div>Bila dihitung maka ditulis</div>
+          <div class="text-hijau">
+            2<sup>3</sup> <span class="text-secondary">= 2 x 2 x 2 = 8</span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="border-2 border-primary pb-8 rounded-lg shadow-lg p-5 mt-12 relative"
+        id="kegiatan3"
+      >
+        <div
+          class="bg-red-300 py-2 px-3 absolute text-putih -top-5 rounded-lg text-sm font-semibold tracking-wider"
+        >
+          Mari Eksplorasi
+        </div>
+        <div class="relative">
+          <img src="../img/guru.png" class="w-14 mt-4" alt="" />
+          <div
+            class="text-sm bg-hijau text-white py-2 px-3 absolute top-6 left-8 bg-opacity-90 font-medium rounded-tl-none rounded-md"
+          >
+            Hitunglah nilai bilangan berpangkat berikut ini!
+          </div>
+        </div>
+        <div class="mt-12">
+          <div class="flex gap-3 items-center">
+            <img src="../img/one_8921537.png" class="w-7" alt="" />
+            <div>
+              <span class="font-semibold text-primary">5<sup>4</sup></span> =
+            </div>
+            <input
+              type="text"
+              class="w-28 h-7 text-center text-sm italic rounded-sm text-hijau border-2 border-hijau shadow-xl focus:outline-none focus:border-hijau answerInput3"
+              placeholder="ketik disini..."
+              data-answer="625"
+            />
+          </div>
+          <div class="mt-3 ml-8 flex gap-3 justify-start">
+            <button
+              class="text-xs py-1 px-3 font-semibold bg-violet-400 text-putih rounded-md checkAnswerButton3"
+            >
+              Cek jawaban
+            </button>
+            <button
+              class="text-xs py-1 px-3 font-semibold border-2 border-jingga text-jingga rounded-md clearButton3"
+            >
+              Hapus
+            </button>
+          </div>
+          <div class="mt-2 ml-8 text-sm resultMessage3"></div>
+        </div>
+        <div class="mt-8">
+          <div class="flex gap-3 items-center">
+            <img src="../img/two_8921602.png" class="w-7" alt="" />
+            <div>
+              <span class="font-semibold text-primary">2<sup>4</sup></span> =
+            </div>
+            <input
+              type="text"
+              class="w-28 h-7 text-center text-sm italic rounded-sm text-hijau border-2 border-hijau shadow-xl focus:outline-none focus:border-hijau answerInput3"
+              placeholder="ketik disini..."
+              data-answer="16"
+            />
+          </div>
+          <div class="mt-3 ml-8 flex gap-3 justify-start">
+            <button
+              class="text-xs py-1 px-3 font-semibold bg-violet-400 text-putih rounded-md checkAnswerButton3"
+            >
+              Cek jawaban
+            </button>
+            <button
+              class="text-xs py-1 px-3 font-semibold border-2 border-jingga text-jingga rounded-md clearButton3"
+            >
+              Hapus
+            </button>
+          </div>
+          <div class="mt-2 ml-8 text-sm resultMessage3"></div>
+        </div>
+        <div class="mt-8">
+          <div class="flex gap-3 items-center">
+            <img src="../img/three_8921657.png" class="w-7" alt="" />
+            <div>
+              <span class="font-semibold text-primary">3<sup>2</sup></span> =
+            </div>
+            <input
+              type="text"
+              class="w-28 h-7 text-center text-sm italic rounded-sm text-hijau border-2 border-hijau shadow-xl focus:outline-none focus:border-hijau answerInput3"
+              placeholder="ketik disini..."
+              data-answer="9"
+            />
+          </div>
+          <div class="mt-3 ml-8 flex gap-3 justify-start">
+            <button
+              class="text-xs py-1 px-3 font-semibold bg-violet-400 text-putih rounded-md checkAnswerButton3"
+            >
+              Cek jawaban
+            </button>
+            <button
+              class="text-xs py-1 px-3 font-semibold border-2 border-jingga text-jingga rounded-md clearButton3"
+            >
+              Hapus
+            </button>
+          </div>
+          <div class="mt-2 ml-8 text-sm resultMessage3"></div>
+        </div>
+      </div>
+      <a
+        href="assesmentDigital.html"
+        class="mx-auto flex justify-center w-52 mt-10 border-2 border-jingga px-3 py-2 text-putih rounded-lg font-semibold tracking-wider"
+      >
+        Assesment Digital
+      </a>
+    </section>
+    <!--  Akhir Kegiatan 3 -->
 
     <script src="../scirpt.js"></script>
   </body>
