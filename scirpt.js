@@ -1,13 +1,3 @@
-// document.querySelectorAll('.tanya').forEach((button) => {
-//   button.addEventListener('click', function () {
-//     const nextElement = this.nextElementSibling;
-//     if (nextElement) {
-//       nextElement.classList.remove('hidden');
-//       this.classList.add('hidden');
-//     }
-//   });
-// });
-
 document.querySelectorAll('.tanya').forEach((button) => {
   button.addEventListener('click', function () {
     const nextElement = this.nextElementSibling;
@@ -38,7 +28,7 @@ toggleButton.addEventListener('click', function () {
 
   hiddenElements.forEach((element, index) => {
     setTimeout(() => {
-      element.classList.remove('hidden');
+      element.classList.toggle('hidden');
     }, index * 500); // Adjust the timing (500ms) as needed
   });
 
@@ -56,3 +46,45 @@ toggleButton.addEventListener('click', function () {
     mariMemahami.scrollIntoView({ behavior: 'smooth' });
   }, totalDelay + 2000);
 });
+
+function addEventListeners() {
+  const checkAnswerButtons = document.querySelectorAll('.checkAnswerButton');
+  const clearButtons = document.querySelectorAll('.clearButton');
+
+  checkAnswerButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      const inputElement = document.querySelectorAll('.answerInput')[index];
+      const userAnswer = inputElement.value;
+      const correctAnswer = inputElement.getAttribute('data-answer');
+      const resultMessage = document.querySelectorAll('.resultMessage')[index];
+      if (userAnswer == correctAnswer) {
+        resultMessage.textContent = 'Jawaban benar!';
+        resultMessage.classList.remove('text-merah');
+        const audioElement2 = document.getElementById('myAudio2');
+        audioElement2.play();
+        resultMessage.classList.add('text-hijau');
+      } else {
+        resultMessage.textContent = 'Jawaban salah, coba lagi.';
+        const audioElement = document.getElementById('myAudio');
+        audioElement.play();
+        resultMessage.classList.remove('text-hijau');
+        resultMessage.classList.add('text-merah');
+      }
+
+      // Menghapus pesan setelah 5 detik
+      // setTimeout(() => {
+      //   resultMessage.textContent = '';
+      // }, 5000);
+    });
+  });
+
+  clearButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.answerInput')[index].value = '';
+      document.querySelectorAll('.resultMessage')[index].textContent = '';
+    });
+  });
+}
+
+// Add event listeners when the document is loaded
+document.addEventListener('DOMContentLoaded', addEventListeners);
