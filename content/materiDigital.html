@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      @font-face {
+        font-family: 'Poppins';
+        src: url('../font/Poppins-Regular.ttf') format('truetype');
+      }
+    </style>
+  </head>
+  <body class="bg-[#FFFAFB]">
+    <nav class="py-3 w-full px-5 fixed bg-opacity-70">
+      <header class="container flex justify-start">
+        <div class="flex items-center gap-5">
+          <a href="../index.html">
+            <svg
+              width="20"
+              height="23"
+              viewBox="0 0 20 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.44444 16.6111L6.01111 14.8094L4.25555 12.7778L13.3333 12.7778L13.3333 10.2222L4.25555 10.2222L6.01111 8.20333L4.44444 6.38889L-9.53674e-07 11.5L4.44444 16.6111ZM17.7778 20.4444H10V23H17.7778C19 23 20 21.85 20 20.4444L20 2.55556C20 1.15 19 -2.38419e-07 17.7778 -2.38419e-07H10L10 2.55556H17.7778L17.7778 20.4444Z"
+                fill="#83D6C5"
+              />
+            </svg>
+          </a>
+          <a
+            href="content/materiDigital.html"
+            id="materiDigital"
+            class="border-2 border-jingga w-36 rounded-lg py-2 text-[13px] text-center font-semibold tracking-wider text-jingga"
+          >
+            Materi Digital
+          </a>
+        </div>
+      </header>
+    </nav>
+
+    <!-- Kegiatan 1 -->
+    <section class="container w-full pt-20 px-5 pb-40">
+      <div class="flex gap-3 text-primary font-bold">
+        <h2 class="w-40">Kegiatan 1 :</h2>
+        <p>Memahami Bilangan Pokok dan Bilangan Pangkat</p>
+      </div>
+      <div class="border-2 border-primary pb-8 rounded-lg shadow-lg p-5 mt-12 relative">
+        <div
+          class="bg-red-300 py-2 px-3 absolute text-putih -top-5 rounded-lg text-sm font-semibold tracking-wider"
+        >
+          Pengantar
+        </div>
+        <div class="relative">
+          <img src="../img/guru.png" class="w-14 mt-4" alt="" />
+          <div
+            class="text-sm bg-hijau text-white py-2 px-3 absolute top-6 left-8 bg-opacity-90 font-medium rounded-tl-none rounded-md"
+          >
+            Yuk Simak apa yang terjadi pada Bakteri berikut
+          </div>
+        </div>
+        <div class="w-full mt-12 px-5">
+          <div class="relative cursor-pointer" id="toggleButton">
+            <img src="../img/play.png" class="w-8 ml-4" alt="" />
+            <img
+              src="../img/tunjuk.png"
+              class="w-8 absolute top-2 left-6 animate-pulse"
+              alt=""
+              id="tunjukplay"
+            />
+          </div>
+          <div
+            id="bakteri"
+            class="px-3 w-full flex mt-6 flex-wrap gap-3 justify-center items-center"
+          >
+            <div class="flex gap-3">
+              <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
+              <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
+            </div>
+            <div class="flex gap-3 hidden">
+              <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
+              <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
+            </div>
+            <div class="flex gap-3 hidden">
+              <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
+              <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
+            </div>
+            <div class="flex gap-3 hidden">
+              <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
+              <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
+            </div>
+            <div class="flex gap-3 hidden">
+              <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
+              <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
+            </div>
+            <div class="flex gap-3 hidden">
+              <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
+              <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
+            </div>
+            <div class="flex gap-3 hidden">
+              <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
+              <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
+            </div>
+            <div class="flex gap-3 hidden">
+              <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
+              <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
+            </div>
+          </div>
+        </div>
+        <div id="jadiBakteri" class="relative mt-8 hidden pb-12 zoomIn">
+          <img src="../img/guru.png" class="w-14 mt-4" alt="" />
+          <div
+            class="text-sm bg-hijau text-white py-2 px-3 absolute text- top-6 left-8 bg-opacity-90 font-medium rounded-tl-none rounded-md"
+          >
+            Bakteri di atas selelu membelah diri setiap saat yang menyebabkan jumlahnya semakin
+            banyak
+          </div>
+        </div>
+      </div>
+      <div
+        class="border-2 hidden zoomIn border-primary pb-8 rounded-lg shadow-lg p-5 mt-12 relative"
+        id="mariMemahami"
+      >
+        <div
+          class="bg-red-300 py-2 px-3 absolute text-putih -top-5 rounded-lg text-sm font-semibold tracking-wider"
+        >
+          Mari Memahami
+        </div>
+        <div class="relative">
+          <img src="../img/guru.png" class="w-14 mt-4 absolute right-0 scale-x-[-1]" alt="" />
+          <div
+            class="text-sm bg-hijau text-white py-2 px-3 absolute text- left-0 top-10 right-8 bg-opacity-90 font-medium rounded-tr-none rounded-md"
+          >
+            Yuk Simak apa yang terjadi pada Bakteri berikut
+          </div>
+        </div>
+        <div class="mt-32 text-lg font-medium px-8 text-secondary w-full">
+          <div class="flex gap-3">
+            <div>2 x 2 ditulis</div>
+            <div
+              class="border-hijau tanya text-hijau border-2 rounded-md px-2 relative cursor-pointer"
+            >
+              ?
+              <img
+                src="../img/tunjuk.png"
+                class="absolute w-16 top-2 -right-2 animate-pulse"
+                alt=""
+              />
+            </div>
+            <div class="text-hijau hidden zoomIn2">2<sup>2</sup></div>
+          </div>
+          <div class="flex gap-3 mt-4 hidden zoomIn">
+            <div>2 x 2 x 2 ditulis</div>
+            <div
+              class="border-hijau tanya text-hijau border-2 rounded-md px-2 relative cursor-pointer"
+            >
+              ?
+              <img
+                src="../img/tunjuk.png"
+                class="absolute w-16 top-2 -right-2 animate-pulse"
+                alt=""
+              />
+            </div>
+            <div class="text-hijau hidden zoomIn2">2<sup>3</sup></div>
+          </div>
+          <div class="flex gap-3 mt-4 hidden zoomIn">
+            <div>2 x 2 x 2 x 2 ditulis</div>
+            <div
+              class="border-hijau tanya text-hijau border-2 rounded-md px-2 relative cursor-pointer"
+            >
+              ?
+              <img
+                src="../img/tunjuk.png"
+                class="absolute w-16 top-2 -right-2 animate-pulse"
+                alt=""
+              />
+            </div>
+            <div class="text-hijau hidden zoomIn2">2<sup>4</sup></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  Akhir Kegiatan 1 -->
+
+    <script src="../scirpt.js"></script>
+  </body>
+</html>
