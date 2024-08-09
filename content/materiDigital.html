@@ -12,9 +12,9 @@
       }
     </style>
   </head>
-  <body class="bg-[#FFFAFB]">
+  <body class="bg-[#FFFAFB] flex-col flex items-center pb-40">
     <nav class="py-3 w-full px-5 fixed top-0 z-50 border-b-2 bg-white bg-opacity-90">
-      <header class="container flex justify-start">
+      <header class="container max-w-4xl flex mx-auto justify-start">
         <div class="flex items-center gap-5">
           <a href="../index.html">
             <svg
@@ -55,14 +55,16 @@
     </audio>
 
     <!-- Kegiatan 1 -->
-    <section class="container w-full pt-24 px-5 pb-40">
+    <section class="container max-w-3xl pt-28 px-5 pb-40">
       <div class="flex gap-3 text-primary font-bold">
-        <h2 class="w-44">Kegiatan 1 :</h2>
-        <p>Memahami Bilangan Pokok dan Bilangan Pangkat</p>
+        <h2 class="w-44 md:w-auto">Kegiatan 1 :</h2>
+        <p class="">Memahami Bilangan Pokok dan Bilangan Pangkat</p>
       </div>
-      <div class="border-2 border-primary pb-8 rounded-lg shadow-lg p-5 mt-12 relative">
+      <div
+        class="border-2 md:px-20 border-primary pb-8 md:pt-8 rounded-lg shadow-lg p-5 mt-12 relative"
+      >
         <div
-          class="bg-red-300 py-2 px-3 absolute text-putih -top-5 rounded-lg text-sm font-semibold tracking-wider"
+          class="bg-red-300 py-2 px-3 absolute text-putih md:left-10 -top-5 rounded-lg text-sm font-semibold tracking-wider"
         >
           Pengantar
         </div>
@@ -74,7 +76,7 @@
             Yuk Simak apa yang terjadi pada Bakteri berikut
           </div>
         </div>
-        <div class="w-full mt-12 px-5">
+        <div class="max-w-[400px] mx-auto mt-12 md:mt-9 px-5">
           <div class="relative cursor-pointer" id="toggleButton">
             <img src="../img/play.png" class="w-8 ml-4" alt="" />
             <img
@@ -84,10 +86,7 @@
               id="tunjukplay"
             />
           </div>
-          <div
-            id="bakteri"
-            class="px-3 w-full flex mt-6 flex-wrap gap-3 justify-center items-center"
-          >
+          <div id="bakteri" class="px-3 flex mt-6 flex-wrap gap-3 justify-center items-center">
             <div class="flex gap-3">
               <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
               <img src="../img/bakteri.png" class="w-7 h-7" alt="" />
@@ -140,7 +139,7 @@
             </svg>
           </div> -->
         </div>
-        <div id="jadiBakteri" class="relative mt-8 hidden pb-12 zoomIn">
+        <div id="jadiBakteri" class="relative mt-8 md:mt-12 hidden pb-12 zoomIn">
           <img src="../img/guru.png" class="w-14 mt-4" alt="" />
           <div
             class="text-sm bg-hijau text-white py-2 px-3 absolute text- top-6 left-8 bg-opacity-90 font-medium rounded-tl-none rounded-md"
@@ -151,15 +150,15 @@
         </div>
       </div>
       <div
-        class="border-2 hidden zoomIn border-primary pb-8 rounded-lg shadow-lg p-5 mt-12 relative"
+        class="border-2 zoomIn hidden md:px-20 border-primary pb-8 md:pb-12 md:pt-8 rounded-lg shadow-lg p-5 mt-12 relative"
         id="mariMemahami"
       >
         <div
-          class="bg-red-300 py-2 px-3 absolute text-putih -top-5 rounded-lg text-sm font-semibold tracking-wider"
+          class="bg-red-300 py-2 px-3 absolute text-putih md:left-10 -top-5 rounded-lg text-sm font-semibold tracking-wider"
         >
           Mari Memahami
         </div>
-        <div class="relative">
+        <div class="relative md:hidden">
           <img src="../img/guru.png" class="w-14 mt-4 absolute right-0 scale-x-[-1]" alt="" />
           <div
             class="text-sm bg-hijau text-white py-2 px-3 absolute text- left-0 top-10 right-8 bg-opacity-90 font-medium rounded-tr-none rounded-md"
@@ -167,7 +166,15 @@
             Perhatikan uraian mengenai eksponen berikut
           </div>
         </div>
-        <div class="mt-32 text-lg font-medium px-8 text-secondary w-full">
+        <div class="relative hidden md:block">
+          <img src="../img/guru.png" class="w-14 mt-4" alt="" />
+          <div
+            class="text-sm bg-hijau text-white py-2 px-3 absolute top-6 left-8 bg-opacity-90 font-medium rounded-tl-none rounded-md"
+          >
+            Perhatikan uraian mengenai eksponen berikut
+          </div>
+        </div>
+        <div class="mt-32 md:mt-8 text-lg font-medium px-8 text-secondary w-full">
           <div class="flex gap-3">
             <div>2 x 2 ditulis</div>
             <div
@@ -213,11 +220,11 @@
         </div>
       </div>
       <div
-        class="border-2 hidden border-primary zoomIn pb-8 rounded-lg shadow-lg p-5 mt-12 relative"
+        class="border-2 md:px-20 hidden border-primary zoomIn pb-8 md:pt-8 rounded-lg shadow-lg p-5 mt-12 relative"
         id="mariEksplorasi"
       >
         <div
-          class="bg-red-300 py-2 px-3 absolute text-putih -top-5 rounded-lg text-sm font-semibold tracking-wider"
+          class="bg-red-300 py-2 px-3 absolute text-putih md:left-10 -top-5 rounded-lg text-sm font-semibold tracking-wider"
         >
           Mari Eksplorasi
         </div>
@@ -384,11 +391,11 @@
         </div>
       </div>
       <div
-        class="border-2 hidden zoomIn border-primary pb-20 rounded-lg shadow-lg p-5 mt-12 relative"
+        class="border-2 zoomIn hidden md:px-20 border-primary pb-24 md:pb-20 rounded-lg md:pt-8 shadow-lg p-5 mt-12 relative"
         id="Kesimpulan"
       >
         <div
-          class="bg-red-300 py-2 px-3 absolute text-putih -top-5 rounded-lg text-sm font-semibold tracking-wider"
+          class="bg-red-300 py-2 px-3 md:left-10 absolute text-putih -top-5 rounded-lg text-sm font-semibold tracking-wider"
         >
           Kesimpulan
         </div>
@@ -407,12 +414,12 @@
     <!--  Akhir Kegiatan 1 -->
 
     <!-- Kegiatan 2 -->
-    <section class="container zoomIn w-full pb-40 px-5 hidden" id="section2">
+    <section class="container zoomIn hidden max-w-3xl px-5 pb-40" id="section2">
       <div class="flex gap-3 text-primary font-bold">
-        <h2 class="w-44">Kegiatan 2 :</h2>
+        <h2 class="w-44 md:w-auto">Kegiatan 2 :</h2>
         <p>Menentukan Bilangan Pokok dan Bilangan Pangkat</p>
       </div>
-      <div class="text-secondary mt-6 font-medium">
+      <div class="text-secondary text-center md:text-left mt-6 md:mt-8 font-medium">
         Tentukan basis dan eksponen pada bilangan berpangkat berikut ini!
       </div>
       <table class="min-w-full border text-center text-secondary font-medium mt-4 border-gray-300">
@@ -548,14 +555,16 @@
     <!--  Akhir Kegiatan 2 -->
 
     <!-- Kegiatan 3 -->
-    <section class="container w-full px-5 pb-40 hidden" id="section3">
+    <section class="container max-w-3xl px-5 hidden" id="section3">
       <div class="flex gap-2 text-primary font-bold" id="section3anak">
-        <h2 class="w-36">Kegiatan 3 :</h2>
+        <h2 class="w-36 md:w-auto">Kegiatan 3 :</h2>
         <p>Menghitung nilai bilangan berpangkat</p>
       </div>
-      <div class="border-2 border-primary pb-8 rounded-lg shadow-lg p-5 mt-12 relative">
+      <div
+        class="border-2 border-primary pb-8 rounded-lg md:pt-8 md:px-20 shadow-lg p-5 mt-12 relative"
+      >
         <div
-          class="bg-red-300 py-2 px-3 absolute text-putih -top-5 rounded-lg text-sm font-semibold tracking-wider"
+          class="bg-red-300 py-2 px-3 md:left-10 absolute text-putih -top-5 rounded-lg text-sm font-semibold tracking-wider"
         >
           Mari Memahami
         </div>
@@ -567,30 +576,30 @@
             Perhatikan uraian mengenai eksponen berikut!
           </div>
         </div>
-        <div class="flex gap-3 text-secondary font-medium ml-8 mt-12">
+        <div class="flex gap-3 text-secondary font-medium ml-8 md:mt-8 mt-12">
           <div>2 x 2 x 2 ditulis</div>
           <div class="text-hijau">2<sup>3</sup></div>
         </div>
-        <div class="flex flex-wrap gap-2 text-secondary font-medium ml-8 mt-3">
+        <div class="flex flex-wrap gap-2 md:inline text-secondary font-medium ml-8 mt-3">
           <span>Ini artinya 2 x 2 x 2 =</span>
-          <span class="text-hijau">2<sup>3</sup></span> atau
+          <span class="text-hijau">2<sup>3</sup></span> <span class="md:ml-6">atau</span>
         </div>
-        <div class="flex flex-wrap gap-2 text-secondary font-medium ml-8 mt-3">
+        <div class="flex flex-wrap gap-2 md:inline-block text-secondary font-medium ml-8 mt-3">
           <span class="text-hijau">2<sup>3</sup></span> <span>= 2 x 2 x 2 </span>
         </div>
-        <div class="flex flex-col gap-1 text-secondary font-medium ml-8 mt-3">
+        <div class="flex flex-col md:flex-row gap-1 text-secondary font-medium ml-8 mt-3">
           <div>Bila dihitung maka ditulis</div>
-          <div class="text-hijau">
+          <div class="text-hijau md:ml-4">
             2<sup>3</sup> <span class="text-secondary">= 2 x 2 x 2 = 8</span>
           </div>
         </div>
       </div>
       <div
-        class="border-2 border-primary pb-8 rounded-lg shadow-lg p-5 mt-12 relative"
+        class="border-2 border-primary md:pt-8 md:px-20 pb-8 rounded-lg shadow-lg p-5 mt-12 relative"
         id="kegiatan3"
       >
         <div
-          class="bg-red-300 py-2 px-3 absolute text-putih -top-5 rounded-lg text-sm font-semibold tracking-wider"
+          class="bg-red-300 py-2 px-3 md:left-10 absolute text-putih -top-5 rounded-lg text-sm font-semibold tracking-wider"
         >
           Mari Eksplorasi
         </div>
@@ -602,7 +611,7 @@
             Hitunglah nilai bilangan berpangkat berikut ini!
           </div>
         </div>
-        <div class="mt-12">
+        <div class="mt-12 md:ml-4 md:mt-8">
           <div class="flex gap-3 items-center">
             <img src="../img/one_8921537.png" class="w-7" alt="" />
             <div>
@@ -629,7 +638,7 @@
           </div>
           <div class="mt-2 ml-8 text-sm resultMessage3"></div>
         </div>
-        <div class="mt-8">
+        <div class="mt-8 md:ml-4">
           <div class="flex gap-3 items-center">
             <img src="../img/two_8921602.png" class="w-7" alt="" />
             <div>
@@ -656,7 +665,7 @@
           </div>
           <div class="mt-2 ml-8 text-sm resultMessage3"></div>
         </div>
-        <div class="mt-8">
+        <div class="mt-8 md:ml-4">
           <div class="flex gap-3 items-center">
             <img src="../img/three_8921657.png" class="w-7" alt="" />
             <div>
@@ -686,7 +695,7 @@
       </div>
       <a
         href="assesmentDigital.html"
-        class="mx-auto flex justify-center w-52 mt-10 border-2 border-jingga px-3 py-2 text-putih rounded-lg font-semibold tracking-wider"
+        class="mx-auto flex justify-center w-52 mt-10 border-2 border-jingga px-3 py-2 text-orange-400 rounded-lg font-semibold tracking-wider"
       >
         Assesment Digital
       </a>
