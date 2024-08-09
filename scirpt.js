@@ -55,9 +55,12 @@ toggleButton.addEventListener('click', function () {
   }, totalDelay);
 
   const mariMemahami = document.getElementById('mariMemahami');
+  const mariBerpikir = document.getElementById('mariBerpikir');
   setTimeout(() => {
     mariMemahami.classList.remove('hidden');
     mariMemahami.scrollIntoView({ behavior: 'smooth' });
+    mariBerpikir.classList.remove('hidden');
+    mariBerpikir.scrollIntoView({ behavior: 'smooth' });
   }, totalDelay + 2000);
 });
 
